@@ -7,6 +7,9 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
 
 
 public class Menu extends javax.swing.JPanel {
@@ -35,18 +38,18 @@ public class Menu extends javax.swing.JPanel {
         list_Menu_Item1.addItem(new Model_Menu("03", "Music Folder", Model_Menu.MenuType.MENU));
         list_Menu_Item1.addItem(new Model_Menu("04", "New Songs", Model_Menu.MenuType.MENU));
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         list_Menu_Item1 = new Components.List_Menu_Item<>();
-        jLabel1 = new javax.swing.JLabel();
+        PanelMoving = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cool/image/icons8-dancing-65.png"))); // NOI18N
-        jLabel1.setText("Dancing Kits");
+        PanelMoving.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        PanelMoving.setForeground(new java.awt.Color(255, 255, 255));
+        PanelMoving.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cool/image/icons8-dancing-65.png"))); // NOI18N
+        PanelMoving.setText("Dancing Kits");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -55,14 +58,14 @@ public class Menu extends javax.swing.JPanel {
             .addComponent(list_Menu_Item1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(list_Menu_Item1, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE))
         );
@@ -85,7 +88,7 @@ public class Menu extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel PanelMoving;
     private Components.List_Menu_Item<String> list_Menu_Item1;
     // End of variables declaration//GEN-END:variables
 }
