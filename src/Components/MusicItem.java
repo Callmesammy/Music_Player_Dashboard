@@ -32,6 +32,8 @@ public class MusicItem extends javax.swing.JPanel {
     
     public void setImage(Model_Music data){
         this.data = data;
+        ibititle.setText(data.getTitle());
+        ibidescriptoon.setText(data.getDescription());
         
         repaint();
     }
@@ -70,19 +72,46 @@ public class MusicItem extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ibititle = new javax.swing.JLabel();
+        ibidescriptoon = new javax.swing.JLabel();
+
+        ibititle.setBackground(new java.awt.Color(255, 255, 255));
+        ibititle.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
+        ibititle.setForeground(new java.awt.Color(255, 255, 255));
+        ibititle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ibititle.setText("Title");
+
+        ibidescriptoon.setBackground(new java.awt.Color(255, 255, 255));
+        ibidescriptoon.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        ibidescriptoon.setForeground(new java.awt.Color(255, 255, 255));
+        ibidescriptoon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ibidescriptoon.setText("Description");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ibidescriptoon, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                    .addComponent(ibititle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(148, Short.MAX_VALUE)
+                .addComponent(ibititle, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ibidescriptoon)
+                .addGap(7, 7, 7))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ibidescriptoon;
+    private javax.swing.JLabel ibititle;
     // End of variables declaration//GEN-END:variables
 }

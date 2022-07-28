@@ -1,19 +1,13 @@
 package Components;
 
+import Model.Model_Music;
+import Swing.ScrollBar;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 
-/**
- *
- * @author user
- */
 public class Panel_Music extends javax.swing.JLayeredPane {
 
     /**
@@ -21,42 +15,46 @@ public class Panel_Music extends javax.swing.JLayeredPane {
      */
     public Panel_Music() {
         initComponents();
+        setOpaque(false);
+//        sp.setHorizontalScrollBar(new ScrollBar());
+       
     }
+    
+   public void addItem(Model_Music data){
+       MusicItem item = new MusicItem();
+       item.setImage(data);
+       Panel.add(item);
+       Panel.repaint();
+       Panel.revalidate();
+   }
 
   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        slider1 = new Swing.Slider();
+        sp = new javax.swing.JScrollPane();
+        Panel = new javax.swing.JPanel();
 
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        sp.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new java.awt.GridLayout());
-        jScrollPane1.setViewportView(jPanel1);
+        Panel.setBackground(new java.awt.Color(255, 255, 255));
+        Panel.setLayout(new java.awt.GridLayout());
+        sp.setViewportView(Panel);
 
-        setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        setLayer(slider1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        setLayer(sp, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(slider1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(slider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
  protected void paintComponent(Graphics g) {
@@ -66,8 +64,7 @@ public class Panel_Music extends javax.swing.JLayeredPane {
  }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private Swing.Slider slider1;
+    private javax.swing.JPanel Panel;
+    private javax.swing.JScrollPane sp;
     // End of variables declaration//GEN-END:variables
 }

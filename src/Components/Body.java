@@ -1,10 +1,12 @@
 
 package Components;
 
+import Model.Model_Music;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -17,8 +19,16 @@ public class Body extends javax.swing.JPanel {
      */
     public Body() {
         initComponents();
+        init();
     }
 
+    private void init(){
+        
+      panel_Music1.addItem(new Model_Music("Artist", "Musi", new ImageIcon(getClass().getResource("/cool/image/001.jpg"))));
+      panel_Music1.addItem(new Model_Music("Artist", "Musi", new ImageIcon(getClass().getResource("/cool/image/002.webp"))));
+      panel_Music1.addItem(new Model_Music("Artist", "Musi", new ImageIcon(getClass().getResource("/cool/image/003.jpg"))));
+      panel_Music1.addItem(new Model_Music("Artist", "Musi", new ImageIcon(getClass().getResource("/cool/image/004.jpg"))));
+    }
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

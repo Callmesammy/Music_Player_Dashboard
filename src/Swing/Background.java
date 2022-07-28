@@ -12,6 +12,10 @@ public class Background extends javax.swing.JPanel {
     public Background() {
         initComponents();
         setOpaque(false);
+        init();
+    }
+    private void init(){
+        
     }
 
   
