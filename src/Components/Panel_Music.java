@@ -39,7 +39,7 @@ public class Panel_Music extends javax.swing.JLayeredPane {
         sp.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         Panel.setBackground(new java.awt.Color(255, 255, 255));
-        Panel.setLayout(new java.awt.GridLayout());
+        Panel.setLayout(new java.awt.GridLayout(1, 0, 4, 0));
         sp.setViewportView(Panel);
 
         setLayer(sp, javax.swing.JLayeredPane.DEFAULT_LAYER);
